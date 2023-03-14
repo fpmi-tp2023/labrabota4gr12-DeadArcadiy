@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <sqlite3.h>
+
+int main(int argc,char* argv[])
+{
+sqlite3 *db;
+char *zErrMsg = 0;
+int rc;
+
+rc = sqlite3_open("countries",&db)
+
+if( rc)
+{
+fprintf(stderr,"Cant open",sqlite3_errmasg(db));
+return 0;
+}
+else
+{
+ fprintf(stderr,"successfully opened");
+}
+sqlite3_close(db);
+}
